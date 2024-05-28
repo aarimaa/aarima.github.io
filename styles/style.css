@@ -1,0 +1,357 @@
+/* Основні кольори */
+:root {
+  --primary-color: #c64848; /* Червоний колір */
+  --secondary-color: #4ecdc4; /* Бірюзовий колір */
+  --text-color: #333; /* Колір тексту */
+  --text-color-alpha: rgb(51, 51, 51, 0.7);
+  --light-gray-bg: #f9f9f9; /* Світло-сірий фон */
+}
+
+iframe {
+  height: 500px;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--light-gray-bg);
+  color: var(--text-color);
+}
+
+.raiting-h2 {
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-anime-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: var(--text-color-alpha);
+  padding: 20px;
+  border-radius: 10px;
+}
+.mouse-parallax {
+  height: 88vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.mouse-parallax-bg {
+  position: absolute;
+  background-image: url("../bg.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  overflow: hidden;
+  transition: transform 0.1s ease;
+}
+
+/* Стилі для заголовка */
+.heading {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+/* Стилі для вступу */
+.intro {
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Стилі для меню */
+.menu {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 12vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.menu-list {
+  padding-inline: 0;
+}
+
+.menu-item {
+  display: inline-block;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  padding: 10px;
+}
+
+.menu-link:hover {
+  color: var(--secondary-color);
+}
+
+/* Стилі для списку аніме */
+.anime-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+#anime-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.anime-item {
+  font-size: 24px;
+  margin-bottom: 20px;
+  background-color: var(--secondary-color); /* Зміна кольору фону */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.anime-item:hover {
+  background-color: #92ded3; /* Зміна кольору фону при наведенні */
+}
+
+.page-title {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+/* Стилі для таблиці манги */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.manga-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header,
+.table-data {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Стилі для опису */
+.description {
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Стилі для відео */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Стилі для форми зворотнього зв'язку */
+.feedback-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.form-submit {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Стилі для контенту про життя сайту та про нас */
+.site-life-content,
+.about-us-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.site-life-description,
+.about-us-description {
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.anime-form {
+  background-color: var(--primary-color); /* Зміна кольору фону */
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 95%;
+}
+
+.anime-input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.anime-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.anime-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.anime-button-edit {
+  background-color: var(--secondary-color); /* Зміна кольору кнопки */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.anime-button-delete {
+  background-color: #fff;
+  color: var(--primary-color); /* Зміна кольору тексту кнопки */
+  border: 2px solid var(--primary-color); /* Зміна кольору рамки кнопки */
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.anime-button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  iframe {
+    height: 200px;
+  }
+  thead {
+    width: 100vw;
+  }
+  .menu {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .menu-item {
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .text-container {
+    width: 90%;
+  }
+  .table-header {
+    width: 20px;
+    font-size: 12px;
+  }
+
+  .manga-table {
+    font-size: 12px;
+  }
+
+  #add-anime-form {
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таблиця рейтингу манги</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <nav class="menu">
+      <ul class="menu-list">
+        <li class="menu-item">
+          <a href="popular_anime.html" class="menu-link">Популярні аніме</a>
+        </li>
+        <li class="menu-item">
+          <a href="manga_rating.html" class="menu-link"
+            >Таблиця рейтингу манги</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="video.html" class="menu-link">Відео</a>
+        </li>
+        <li class="menu-item">
+          <a href="feedback.html" class="menu-link"
+            >Форма зворотнього зв'язку</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="site_life.html" class="menu-link">Життя сайту</a>
+        </li>
+        <li class="menu-item">
+          <a href="about.html" class="menu-link">Про нас</a>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="page-title">Таблиця рейтингу манги</h1>
+    <p class="description">
+      Таблиця рейтингу манги буде оновлюватись за допомогою API. Рейтинг не
+      береться з неба, а отримується за допомогою запитів до серверу.
+    </p>
+    <div class="table-container">
+      <table class="manga-table">
+        <thead>
+          <tr>
+            <th class="table-header">Назва</th>
+            <th class="table-header">Автор</th>
+            <th class="table-header">Жанр</th>
+            <th class="table-header">Рейтинг</th>
+          </tr>
+        </thead>
+        <tbody id="anime-table">
+          <tr class="table-row" id="conan-row">
+            <td class="table-data" data-label="Назва">
+              <a
+                href="https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D1%82%D0%B5%D0%BA%D1%82%D0%B8%D0%B2_%D0%9A%D0%BE%D0%BD%D0%B0%D0%BD"
+                target="_blank"
+                >Детектив Конан</a
+              >
+            </td>
+            <td class="table-data" data-label="Автор">
+              <a
+                href="https://uk.wikipedia.org/wiki/%D0%93%D0%BE%D1%81%D1%8C%D0%BE_%D0%90%D0%BE%D1%8F%D0%BC%D0%B0"
+                target="_blank"
+                >Госьо Аояма</a
+              >
+            </td>
+            <td class="table-data" data-label="Жанр">Детектив, пригоди</td>
+            <td class="table-data" data-label="Рейтинг" id="conan-rating"></td>
+          </tr>
+          <tr class="table-row" id="tokyo-ghoul-row">
+            <td class="table-data" data-label="Назва">
+              <a
+                href="https://uk.wikipedia.org/wiki/Tokyo_Ghoul"
+                target="_blank"
+                >Токійський гуль</a
+              >
+            </td>
+            <td class="table-data" data-label="Автор">
+              <a
+                href="https://uk.wikipedia.org/wiki/%D0%A1%D1%83%D0%B9_%D0%86%D1%81%D1%96%D0%B4%D0%B0"
+                target="_blank"
+                >Суй Ісіда</a
+              >
+            </td>
+            <td class="table-data" data-label="Жанр">Фентезі, жахи, драма</td>
+            <td
+              class="table-data"
+              data-label="Рейтинг"
+              id="tokyo-ghoul-rating"
+            ></td>
+          </tr>
+          <tr class="table-row" id="attack-on-titan-row">
+            <td class="table-data" data-label="Назва">
+              <a
+                href="https://uk.wikipedia.org/wiki/%D0%90%D1%82%D0%B0%D0%BA%D0%B0_%D1%82%D0%B8%D1%82%D0%B0%D0%BD%D1%96%D0%B2"
+                target="_blank"
+                >Атака титанів</a
+              >
+            </td>
+            <td class="table-data" data-label="Автор">
+              <a
+                href="https://uk.wikipedia.org/wiki/%D0%A5%D0%B0%D0%B4%D0%B6%D1%96%D0%BC%D0%B5_%D0%86%D1%81%D0%B0%D1%8F%D0%BC%D0%B0"
+                target="_blank"
+                >Хадзіме Ісаяма</a
+              >
+            </td>
+            <td class="table-data" data-label="Жанр">Фентезі, пригоди, жахи</td>
+            <td
+              class="table-data"
+              data-label="Рейтинг"
+              id="attack-on-titan-rating"
+            ></td>
+          </tr>
+          <tr class="table-row" id="jojo-row">
+            <td class="table-data" data-label="Назва">
+              <a
+                href="https://uk.wikipedia.org/wiki/JoJo%E2%80%99s_Bizarre_Adventure"
+                target="_blank"
+                >Джо Джо</a
+              >
+            </td>
+            <td class="table-data" data-label="Автор">
+              <a
+                href="https://uk.wikipedia.org/wiki/%D0%A5%D1%96%D1%80%D0%BE%D1%85%D1%96%D0%BA%D0%BE_%D0%90%D1%80%D0%B0%D0%BA%D1%96"
+                target="_blank"
+                >Хірохіко Аракі</a
+              >
+            </td>
+            <td class="table-data" data-label="Жанр">
+              Пригоди, бойовик, фентезі
+            </td>
+            <td class="table-data" data-label="Рейтинг" id="jojo-rating"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="raiting-h2">
+      <h2>Додати нове аніме</h2>
+    </div>
+    <div class="form-container">
+      <form id="add-anime-form" class="anime-form">
+        <label for="name">Назва аніме:</label>
+        <input type="text" id="name" class="anime-input" required /><br />
+        <label for="link">Посилання на аніме:</label>
+        <input type="text" id="link" class="anime-input" required /><br />
+        <label for="author">Автор:</label>
+        <input type="text" id="author" class="anime-input" required /><br />
+
+        <label for="authorLink">Посилання на автора:</label>
+        <input type="text" id="authorLink" class="anime-input" required /><br />
+
+        <label for="genres">Жанри:</label>
+        <input type="text" id="genres" class="anime-input" required /><br />
+        <label for="idApi">ID рейтингу:</label>
+        <input type="number" id="idApi" class="anime-input" required /><br />
+
+        <button id="add-anime-button" class="anime-button">Додати</button>
+      </form>
+      <h2>Редагувати аніме:</h2>
+      <form id="edit-anime-form" class="anime-form" style="display: none">
+        <input type="hidden" id="edit-anime-id" />
+        <label for="edit-name">Назва аніме:</label>
+        <input type="text" id="edit-name" class="anime-input" required /><br />
+        <label for="edit-link">Посилання на аніме:</label>
+        <input type="text" id="edit-link" class="anime-input" required /><br />
+        <label for="edit-author">Автор:</label>
+        <input
+          type="text"
+          id="edit-author"
+          class="anime-input"
+          required
+        /><br />
+
+        <label for="edit-authorLink">Посилання на автора:</label>
+        <input
+          type="text"
+          id="edit-authorLink"
+          class="anime-input"
+          required
+        /><br />
+
+        <label for="edit-genres">Жанри:</label>
+        <input
+          type="text"
+          id="edit-genres"
+          class="anime-input"
+          required
+        /><br />
+        <label for="edit-idApi">ID рейтингу:</label>
+        <input
+          type="number"
+          id="edit-idApi"
+          class="anime-input"
+          required
+        /><br />
+        <button id="update-anime-button" class="anime-button">Оновити</button>
+        <button id="cancel-update-button" class="anime-button">
+          Відмінити
+        </button>
+      </form>
+    </div>
+    <script src="manga_rating.js"></script>
+  </body>
+</html>
